@@ -46,7 +46,7 @@ def process_audio(input, output, intro_text):
      if i.split(":")[0].strip() == "A":
        voice = client.generate(
        text=i.split(":")[1].strip(),
-       voice="River")
+       voice="John Englert")
        name = f"intro{ele}.wav"
        path = os.path.join("temp", name)
        save(voice, path)
@@ -54,7 +54,7 @@ def process_audio(input, output, intro_text):
      elif i.split(":")[0].strip() == "B":
        voice = client.generate(
        text=i.split(":")[1].strip(),
-       voice="Alice")
+       voice="Susan Englert")
        name = f"intro{ele}.wav"
        path = os.path.join("temp", name)
        save(voice,path)
@@ -71,14 +71,14 @@ def process_audio(input, output, intro_text):
     if utterance.speaker == "A":
       voice = client.generate(
       text=utterance.text,
-      voice="River")
+      voice="John Englert")
       name = f"test{i}.wav"
       path = os.path.join("temp", name)
       save(voice, path)
     elif utterance.speaker == "B":
       voice = client.generate(
       text=utterance.text,
-      voice="Alice")
+      voice="Susan Englert")
       name = f"test{i}.wav"
       path = os.path.join("temp", name)
       save(voice,path)
